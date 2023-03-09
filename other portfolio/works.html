@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WORKS</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        @keyframes slidein {
+       from {
+         margin-left: 100%;
+      
+       }
+     
+       to {
+         margin-left: 0%;
+        
+       }
+     }
+        div.gallery {
+          border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+          border: 2px solid #777;
+          opacity: 0.5;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .responsive {
+          padding: 0 6px;
+          float: left;
+          width: 49.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+          .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+          }
+        }
+        
+        @media only screen and (max-width: 500px) {
+          .responsive {
+            width: 100%;
+          }
+        }
+        
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        body{
+       /* background-image: url("https://media.istockphoto.com/id/1384378940/photo/data-stream.jpg?b=1&s=170667a&w=0&k=20&c=DLdrzrbqKhP1m9KTg3PEWQB2Ti2Ks_2A9uU6mkDECTo="); */
+background-size: cover;
+font-family: "Poppins", sans-serif;
+
+    }
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+:root{
+--primary: rgb(29, 221, 189);
+--bgDark: rgb(12, 12, 12);
+--white: rgb(250, 250, 250);
+--secondary: rgb(0, 59, 50);
+--bgLight: rgb(190, 181, 181);
+--white: #f9f9f9;
+--black: #36383F;
+--gray: #85888C;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+
+    }
+
+
+/* Reset */
+body{
+    /* background-color: var(--white); */
+    font-family: "Poppins", sans-serif;
+   
+    text-decoration: none;
+    background-color: var(--bgDark);
+}
+
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.header{
+    background-color: var(--bgDark);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--bgDark);
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+    border-bottom: #f9f9f9;
+}
+.menu a:active{
+  color: var(--primary);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--primary);
+}
+
+    .hamb{
+        display: none;
+    }
+}
+  
+   
+    
+.services{
+       width: 100vw;
+}
+.name{
+      
+       color: rgb(248, 241, 241);
+       font-size: 50px;
+     align-content: center;
+       border-radius: 30%;
+       
+}
+.column {
+       float: left;
+       width: 50%;
+       padding: 10px;
+       height: 300px;
+       animation-duration: 3s;
+       animation-name: slidein; /* Should be removed. Only for demonstration */
+     }
+     
+     /* Clear floats after the columns */
+     .row:after {
+       content: "";
+       display: table;
+       clear: both;
+     }
+     
+     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+     @media screen and (max-width: 600px) {
+       .column {
+         width: 100%;
+       }}
+       .active{
+    color: var(--primary)
+}
+.buttom{
+     object-position: bottom;
+       width: 100vw;
+       height: 400px;
+     
+     /* right: 0.8; */
+     border-radius: 20%;
+     border-bottom: #85888C;
+     /* box-shadow: 20px 20px 50px 30px var(--white); */
+     animation-duration: 10s;
+     animation-name: second; 
+     background-size: contain;
+     animation-iteration-count: infinite;
+     background-image:url("https://img.freepik.com/premium-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg?w=996");
+    }
+
+      
+        
+      @media screen and (max-width: 600px) {
+        .buttom{
+          width: 100vw;
+           height: 95vw;
+           padding-bottom: 100%;
+        }
+      }
+      @keyframes second {
+        5%  {background-image:url("https://img.freepik.com/premium-photo/word-design-written-top-colorful-geometric-3d-shapes_2227-1663.jpg?w=996");}
+        10%   {background-image:url("https://img.freepik.com/free-vector/white-convertible-car-isolated-white-vector_53876-66815.jpg?w=900&t=st=1677762972~exp=1677763572~hmac=661d2550af5a4204116963c50fa287b3117db6860441045df3f3e4fc280efe02");}
+        20%   {background-image:url("https://img.freepik.com/premium-psd/white-natural-podium-stage_273999-333.jpg");}
+        30%   {background-image:url("https://img.freepik.com/premium-photo/abstract-neon-light-lion-artwork-design-digital-art-wallpaper-glowing-space-background-generative-ai_742252-10476.jpg");}
+       40%   {background-image: url("https://img.freepik.com/free-vector/blue-sports-car-isolated-white-vector_53876-67418.jpg?t=st=1677764772~exp=1677765372~hmac=9eb8349eb45e7b0cf580165aa9c142ce3c38fe75142f602462cd5fc0bf15db21");}
+        50%   {background-image:url("https://img.freepik.com/free-photo/hotel-outside-table-deck-balcony_1203-5552.jpg?w=826&t=st=1677765447~exp=1677766047~hmac=f85474ca397fe01df65556f4700ba68b731bd377f5438d647db1265e4a887c45");}
+        60%   {background-image:url("https://img.freepik.com/free-photo/house-isolated-field_1303-23773.jpg?w=826&t=st=1677760707~exp=1677761307~hmac=208c8b0d799d612d75feb6963ff3900a0405e53621027a0395a564be080f63db");}
+        70%   {background-image: url("https://img.freepik.com/premium-photo/3d-rendering-large-modern-contemporary-house-wood-concrete-early-evening_190619-1492.jpg");}
+        80%   {background-image: url("https://img.freepik.com/free-photo/3d-rendering-modern-dining-room-living-room-with-luxury-decor_105762-1932.jpg?w=996&t=st=1677760611~exp=1677761211~hmac=faf2ce1bede1b1d83c9ee862f7ae15173fc6e43908b6322baec13cd5b52cf0bd");}
+        90%    {background-image: url("https://img.freepik.com/free-photo/beautiful-shot-sea-with-mountain-distance-clear-sky_181624-2248.jpg?w=996&t=st=1677761903~exp=1677762503~hmac=bc4b993a45ec29c50b51ab01edadd4d3f0cf459dcec6eab4b54507b7d24b3ebe");}
+       100%   {background-image:url("https://img.freepik.com/free-photo/blue-sport-sedan-parked-yard_114579-5078.jpg?t=st=1677762089~exp=1677762689~hmac=43decb257d74f81596f50d158289cb1d68d19e4be691b929c69af757a057f2e0");}
+      }
+      .socials a:hover{
+                        opacity: 0.3;
+                        width: 70px;
+                        border: 4px  solid white;
+                    }
+     </style>
+        
+</head>
+<body>
+  <header class="header">
+    <!-- Logo -->
+    <a href="#" class="logo">FB</a>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+          <li><a href="file:///C:\Users\BRANDON\Desktop\other portfolio\new_index.html">  home</a></li>
+          <li class="active"><a href="#"><span class="active"> portfolio</span></a> </li>
+          <li><a href="#">About</a></li>
+          <li><a href="file:///C:\Users\BRANDON\Desktop\other portfolio\contact.html">contact</a></li>
+        </ul>
+     
+    </nav>
+   
+</header>
+
+
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="">
+          <img src="https://images.unsplash.com/photo-1586455122341-927f2dec0691?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdyYXBoaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">
+            <h1>
+              <span style="font-size:10px;">
+                  <span style="font-weight:normal;"><span style="color:#fcf8f6;">
+                      <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                          <span style="letter-spacing:0.4em;font-size: 30px"> <strong> HIGH GRAPHICS WALLPAPER </strong></span>
+                          </span>
+                          </span>
+                          </span>
+                          </span>
+                          </h1></div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_forest.jpg">
+          <img src="https://plus.unsplash.com/premium_photo-1668790939919-08e863d23c86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhcGhpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc"><h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#fbfaf9;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em; font-size: 30px"> <strong> 3D '!' SIGN<br><br><br> <br></strong></span>
+                        
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                      </h1></div>
+            
+        </div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="https://media.istockphoto.com/id/1384378940/photo/data-stream.jpg?b=1&s=170667a&w=0&k=20&c=DLdrzrbqKhP1m9KTg3PEWQB2Ti2Ks_2A9uU6mkDECTo=" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc"><h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#dad8d8;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em; font-size: 30px"> <strong> HIGH GRAPHICS CABLES </strong></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </h1></div></div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3JhcGhpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">
+            <h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#dbd7d5;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em; font-size: 30px"> <strong> GUITER WALLPAPER</strong></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </h1></div></div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="https://i.pinimg.com/originals/f3/86/e6/f386e6132693b69dd803cc5bf2cc14de.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc"> <h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#fefbf9;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em; font-size: 30px"> <strong> STREAT IMAGE</strong></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </h1></div>
+        </div>
+      </div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img src="file:///C:\Users\BRANDON\Desktop\my portfolio\images\icon.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGdyYXBoaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc"><h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#fefbf9;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em;font-size: 30px"> <strong> DIAMOND </strong></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </h1></div></div>
+      </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="https://media.istockphoto.com/id/1427277501/photo/electric-car-and-electric-vehicle-charging-station.jpg?b=1&s=170667a&w=0&k=20&c=Czck-LUuqdz1iEju1JMt49N0w-jftkm2GWW1DqjMHXk=" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc"><h1>
+            <span style="font-size:10px;">
+                <span style="font-weight:normal;"><span style="color:#f4efed;">
+                    <span style="font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;">
+                        <span style="letter-spacing:0.4em; font-size: 30px;"> <strong> ELECTRIC CAR </strong></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </h1>
+                       </div>
+                     
+        </div>
+      </div><div class="buttom" style="float: left;">
+                    
+      </div>
+      <footer style="width: 100vw; height:100vh ;">
+        <div class="socials">
+          <a href="#"><img src="https://w7.pngwing.com/pngs/927/778/png-transparent-facebook-icon-like-button-facebook-icon-blue-text-rectangle-thumbnail.png" width="40px"></a>
+          <a href="#"><img src="https://w7.pngwing.com/pngs/708/311/png-transparent-icon-logo-twitter-logo-twitter-logo-blue-social-media-area-thumbnail.png" width="40px"></a>
+          <a href="#"><img src="https://w7.pngwing.com/pngs/293/896/png-transparent-whats-app-logo-whatsapp-facebook-instant-messaging-icon-whatsapp-logo-text-logo-grass-thumbnail.png" width="40px"></a>
+          <a href="#"><img src="https://w7.pngwing.com/pngs/511/605/png-transparent-in-logo-linkedin-diduco-ab-icon-linkedin-blue-angle-text-thumbnail.png" width="40px"></a>
+          <a href="#"><img src="https://w7.pngwing.com/pngs/817/967/png-transparent-gmail-logo-gmail-email-icon-logo-gmail-logo-angle-text-rectangle-thumbnail.png" width="40px"></a>
+          </div>
+      </footer>  
+      </div>
+     
+<!--     
+    <div class="clearfix">
+      
+    </div>
+    
+    <div style="padding:6px;">
+    
+    </div> -->
+
+    
+    </body>
+    </html>
