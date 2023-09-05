@@ -1,0 +1,496 @@
+.container {
+
+  width: 99%;
+  height: auto;
+  background-color: rgb(153, 148, 148);
+
+}
+
+.layer1 {
+
+  width: 100%;
+  height: auto;
+
+  background-image: url("file:///home/brandon/Desktop/my%20portfolio/Rectangle%2025.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* import font */
+
+:root {
+  --white: #f9f9f9;
+  --black: #36383F;
+  --gray: #85888C;
+  --primary: rgb(29, 221, 189);
+  --bgDark: rgb(12, 12, 12);
+  --white: rgb(250, 250, 250);
+  --secondary: rgb(0, 59, 50);
+  --bgLight: rgb(190, 181, 181);
+  --white: #f9f9f9;
+  --black: #36383F;
+  --gray: #85888C;
+}
+
+
+/* variables*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  background-color: transparent;
+
+  position: sticky;
+  top: 0;
+  width: 95%;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  color: var(--white);
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+/* Nav menu */
+.nav {
+  width: 95%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--black);
+  overflow: hidden;
+
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--white);
+}
+
+.menu a:hover {
+  background-color: var(--gray);
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 20px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+}
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--white);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  
+}
+
+.hamb-line::before {
+  top: 5px;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+/* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked~nav {
+  max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .nav {
+    
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+
+
+  .menu li {
+    float: left;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--gray);
+
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  .logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 50px;
+    margin-left: 10px;
+  }
+
+}
+
+
+
+
+
+.form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  ;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.ba {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.form:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.form:hover .input {
+  display: block;
+}
+
+.form:hover .ba {
+  background: #07051a;
+  color: white;
+}
+
+.adjust {
+
+  max-width: 55%;
+  height: auto;
+
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #F2FDD5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.hi {
+  max-width: 80%;
+  height: auto;
+
+}
+
+.picture {
+  max-width: 40%;
+  height: auto;
+  margin-top: 0%;
+
+}
+
+.dssign {
+  max-width: 50%;
+  height: auto;
+  transform: rotate(173.911deg);
+  flex-shrink: 0;
+}
+
+.dssign1 {
+  max-width: 50%;
+  height: auto;
+  flex-shrink: 0;
+
+}
+
+@media (min-width: 768px) {
+
+  footer .name {
+    size: 23px;
+
+  }
+
+  .btn {
+    padding: 0.6rem 4rem;
+    font-size: 4rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-top: 0%;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s ease;
+  }
+
+}
+
+.btn {
+  padding: 0.1rem 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-top: 0%;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin-top: -15rem;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  border-color: rgb(71, 44, 48);
+  color: black;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: rgb(61, 60, 60);
+  color: var(--secondary);
+}
+
+
+
+.layer2 {
+  width: 100%;
+  height: auto;
+  border-radius: 518px 84px 95px 0px;
+  background: url("https://www.figma.com/file/k5V9YzimkO2FtViRUgh0b9/image/3fcb380bdcea1eead0f684ad86a74a24594a5530"), lightgray 50% / cover no-repeat;
+}
+
+.background {
+  width: 0%;
+  height: auto;
+  flex-shrink: 0;
+  background-image: url("file:///home/brandon/Desktop/my%20portfolio/Rectangle 22.png");
+  mix-blend-mode: lighten;
+  background-repeat: no-repeat;
+
+}
+
+.me {
+  height: 400px;
+}
+
+.writting {
+  width: 100%;
+  height: auto;
+
+}
+
+.para {
+  align-content: center;
+  width: 95%;
+  height: auto;
+  padding: 0.1rem 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #575758;
+  text-transform: uppercase;
+  transition: all .2s ease;
+  line-height: 30px;
+}
+
+@media (min-width: 768px) {
+
+  .para {
+    align-content: center;
+    width: 95%;
+    height: auto;
+    padding: 0.1rem 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #6d6a6a;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    line-height: 70px;
+  }
+
+  .writting {
+    width: 50%;
+    height: auto;
+
+  }
+
+  .background {
+    width: 50%;
+    height: auto;
+  }
+
+  .backgrounds {
+    width: 100%;
+    height: auto;
+  }
+
+  .me {
+    height: 800px;
+  }
+}
+
+.layer3 {
+  width: 100%;
+  height: auto;
+  border-radius: 518px 84px 95px 0px;
+  background: url("https://www.figma.com/file/k5V9YzimkO2FtViRUgh0b9/image/3fcb380bdcea1eead0f684ad86a74a24594a5530"), lightgray 50% / cover no-repeat;
+}
+
+.layer4 {
+  width: 100%;
+  height: auto;
+  max-height: 1000px;
+  border-radius: 84px 84px 95px 0px;
+  background: url("https://www.figma.com/file/k5V9YzimkO2FtViRUgh0b9/image/3fcb380bdcea1eead0f684ad86a74a24594a5530"), lightgray 50% / cover no-repeat;
+
+}
+
+     
+
+
+/* Animation property */
+button {
+animation: wiggle 5s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+0%, 7% {
+transform: rotateZ(0);
+}
+15% {
+transform: rotateZ(-15deg);
+}
+20% {
+transform: rotateZ(10deg);
+}
+25% {
+transform: rotateZ(-10deg);
+}
+30% {
+transform: rotateZ(6deg);
+}
+35% {
+transform: rotateZ(-4deg);
+}
+40%, 100% {
+transform: rotateZ(0);
+}
+}
+
+
+
